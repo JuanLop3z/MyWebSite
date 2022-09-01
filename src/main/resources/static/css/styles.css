@@ -1,39 +1,51 @@
 @charset "UTF-8";
 
-:root{
+:root {
     --color-negro: #0f0f0ffa;
     --color-Logo: #1c3144;
     --color-blanco: #ffff;
 }
 
-body{
-    background: var(--color-negro);
+body {
+    background: var(--color-blanco);
 }
-.nav .justify-content-center{
+
+.nav .justify-content-center {
     text-align: center;
     text-size-adjust: inherit;
     background-color: #000000;
     margin: auto;
 }
-.navbar-brand{
-    font-style: var(--color-negro);
+
+.navbar-brand {
+    font-style: var(--color-blanco);
 }
 
-#MiNombre{
+#MiNombre {
     font-size: 65px;
     font-family: Arial, Helvetica, sans-serif;
     font-style: italic;
-    color: var(--color-blanco);
+    color: var(--color-negro);
 }
 
-h2{
+h2 {
     font-size: 65px;
     font-family: Arial, Helvetica, sans-serif;
     font-style: italic;
-    color: var(--color-blanco);
+    color: var(--color-negro);
     text-align: center;
 }
 
-.nav{
+.nav {
     font-size: 23px;
 }
+
+footer {
+    block-size: 50px;
+}
+
+hr {
+    color: var(--color-negro);
+}
+
+
