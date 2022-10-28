@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="es">
+<html lang="en">
 
 <head>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>JL/webDeveloper</title>
+  <title>JL/Developer</title>
   <link rel="icon" href="Img/jlLogo.jpg">
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -17,60 +17,95 @@
 </head>
 
 <body>
-  <nav class="navbar-brand">
-    <ul class="nav justify-content-center">
-      <li class="nav-item">
-        <a class="nav-link link-secondary" aria-current="page" href="#">Portafolio</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link link-secondary" href="#">MySkills</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link link-secondary" href="#">Contact</a>
-      </li>
-    </ul>
+  <nav id="Navbar" class="navbar navbar-expand-sm navbar-dark ">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+        <a href="#" onclick="cambiar();"><img src="Img/petardo.png" id="cohete"></a>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="nav justify-content-center">
+          <li id="objetos" class="nav-item col-sm-4">
+            <a class="nav-link link-secondary zoom" aria-current="page" href="#Portafolio">Portafolio</a>
+          </li>
+          <li class="nav-item col-sm-4">
+            <a class="nav-link link-secondary zoom" href="#MySkills">MySkills</a>
+          </li>
+          <li class="nav-item col-sm-4">
+            <a class="nav-link link-secondary zoom" href="#Contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
   </nav>
-
-
-  <div id="MiNombre" class="container">
-    <p>Juan</p>
-    <p>Sebastian</p>
-    <p>Lopez</p>
-    <p>Galindo</p>
+  <div id="fondoNombre">
+    <div id="datos" class="container-fluid">
+      <div id="b">
+        <p style="color: aliceblue; font-size: 65px; font-family: Arial, Helvetica, sans-serif;">Juan Lopez</p>
+        <br />
+        <hr style="background-color: aliceblue;">
+        <h1 style="color: aliceblue; ">Backend Developer</h1>
+      </div>
+    </div>
   </div>
-  <hr>
-  <div class="container">
-    <h2>Portafolio</h2>
-    <hr style="color: aliceblue;">
-    <div class="jumbotron">
-      <div class="row align-items-center">
-        <div class="col">
-          <div class="card" style="width: 18rem;">
-            <img src="Img/jlLogoInvertido.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">MyProject</h5>
-              <p class="card-text">Is an application developed with views and jframe that includes minigames, etc.</p>
-              <a href="https://github.com/JuanLop3z/MyProject.git" class="btn btn-primary ">Go there</a>
+
+  <div id="quiensoy">
+    <h2>Who I am?</h2>
+    <hr>
+    <div class="container-fluid">
+      <div class="row justify-content-center">
+        <div class="col-8">
+          <p style="text-align: center; color: aliceblue; font-family: 'Courier New';">
+            I'm a software developer enthusiastic about technology and passionate
+            about learning, I certified myself in backend development in java, among
+            other things a lover of video games and self-learning<br />
+            "My philosophy has always been to be the best, not to be the first."<br />
+            Tim Cook, Apple CEO</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div id="Portafolio" class="container-fluid">
+    <h2>
+      Portafolio
+    </h2>
+    <hr>
+    <div id="c">
+      <div class="jumbotron container-fluid ">
+        <div class="row ">
+          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <div class="card">
+              <img src="Img/jlLogoInvertido.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">MyProject</h5>
+                <p class="card-text">Is an application developed with views and jframe that includes minigames, etc.</p>
+                <a href="https://github.com/JuanLop3z/MyProject.git" target="_blank" rel="noreferrer noopener"
+                  class="btn btn-primary ">Go there</a>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col">
-          <div class="card" style="width: 18rem;">
-            <img src="Img/jlLogoInvertido.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Website Technoharwd</h5>
-              <p class="card-text">Web-site developed in c# with ASP.Net and Bootstrap</p>
-              <a href="https://github.com/JuanLop3z/Technoharwd_Project.git" class="btn btn-primary ">Go there</a>
+          <div class=" col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <div class="card">
+              <img src="Img/jlLogoInvertido.jpg" class="card-img-top" class="mx-auto d-block" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Website Technoharwd</h5>
+                <p class="card-text">Web-site developed in c# with ASP.Net and Bootstrap</p>
+                <a href="https://github.com/JuanLop3z/Technoharwd_Project.git" target="_blank" rel="noreferrer noopener"
+                  class="btn btn-primary " style="margin-top: 30px;">Go there</a>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col">
-          <div class="card" style="width: 18rem;">
-            <img src="Img/jlLogoInvertido.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Cats Api</h5>
-              <p class="card-text">Simple api test</p>
-              <a href="https://github.com/JuanLop3z/Cats_Api.git" class="btn btn-primary ">Go there</a>
+          <div class=" col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <div class="card">
+              <img src="Img/jlLogoInvertido.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Cats Api</h5>
+                <p class="card-text">Simple api test</p>
+                <a href="https://github.com/JuanLop3z/Cats_Api.git" target="_blank" rel="noreferrer noopener"
+                  class="btn btn-primary " style="margin-top: 50px;">Go there</a>
+              </div>
             </div>
           </div>
         </div>
@@ -78,63 +113,97 @@
     </div>
   </div>
 
-  <hr>
-  <div class="container">
+
+
+  <div id="MySkills" class="container-fluid ">
     <h2>
       MySkills
     </h2>
-    <hr style="color: aliceblue;">
+    <hr>
+    <div class="row align-items-center ">
+      <div id="caja" class="shadow-lg p-3 mb-5 rounded col-xs-4 col-sm-4 col-md-4 col-lg-4  zoom ">
+        <a href=""><img src="Img/IconsSkills/iconoHTML.ico" alt="iconoHTML" class="mx-auto d-block"></a>
+      </div>
+      <div id="caja" class="shadow-lg p-3 mb-5 rounded col-xs-2 col-sm-4 col-md-4 col-lg-4  zoom">
+        <a href=""><img src="Img/IconsSkills/iconoCSS.ico" alt="iconoCSS" class="mx-auto d-block"></a>
+      </div>
+      <div id="caja" class=" shadow-lg p-3 mb-5 rounded col-xs-2 col-sm-4 col-md-4 col-lg-4  zoom">
+        <a href=""><img src="Img/IconsSkills/iconoJS.ico" alt="iconoJS" class="mx-auto d-block"></a>
+      </div>
+    </div>
     <div class="row align-items-center">
-      <div class="col-sm-3">
-        <a href=""><img src="Img/iconoJava.ico" alt="iconoJava"></a>
+      <div id="caja" class="shadow-lg p-3 mb-5 rounded col-xs-4 col-sm-4 col-md-4 col-lg-4 zoom">
+        <a href=""><img src="Img/IconsSkills/iconoJava.ico" alt="iconoJava" class="mx-auto d-block"></a>
       </div>
-      <div class="col-sm-3">
-        <a href=""><img src="Img/iconoNet.png" alt="iconoNet"></a>
+      <div id="caja" class="shadow-lg p-3 mb-5 rounded col-xs-2 col-sm-4 col-md-4 col-lg-4 zoom">
+        <a href=""><img src="Img/IconsSkills/iconoCharp.ico" alt="iconoC#" class="mx-auto d-block"
+            style="width: 128px; height:128px ;"></a>
       </div>
-      <div class="col-sm-3">
-        <a href=""><img src="Img/iconoHTML.ico" alt="iconoHTML"></a>
+      <div id="caja" class="shadow-lg p-3 mb-5 rounded col-xs-2 col-sm-4 col-md-4 col-lg-4 zoom">
+        <a href=""><img src="Img/IconsSkills/iconoSQLServer.png" alt="iconoSQLServer" class="mx-auto d-block"></a>
       </div>
-      <div class="col-sm-3">
-        <a href=""><img src="Img/iconoSQLServer.png" alt="iconoSQLServer"></a>
+    </div>
+    <div class="row align-items-center">
+      <div id="caja" class="shadow-lg p-3 mb-5 rounded col-xs-4 col-sm-4 col-md-4 col-lg-4 zoom">
+        <a href=""><img src="Img/IconsSkills/iconoAndroidstudio.ico" alt="iconoAndroidstudio" class="mx-auto d-block"
+            style="margin-top: 45px"></a>
+      </div>
+      <div id="caja" class="shadow-lg p-3 mb-5 rounded col-xs-2 col-sm-4 col-md-4 col-lg-4 zoom">
+        <a href=""><img src="Img/IconsSkills/iconoSpring-boot.ico" alt="iconoSpring-boot" class="mx-auto d-block"
+            style="width: 128px; height:67px ;margin-top: 20px"></a>
+      </div>
+      <div id="caja" class="shadow-lg p-3 mb-5 rounded col-xs-2 col-sm-4 col-md-4 col-lg-4 zoom">
+        <a href=""><img src="Img/IconsSkills/iconoSpring.ico" alt="iconoSprings" class="mx-auto d-block"
+            style="width: 128px; height:85px; margin-top: 15px;"></a>
+      </div>
+    </div>
+    <div class="row align-items-center justify-content-center">
+      <div id="caja" class="shadow-lg p-3 mb-5 rounded col-xs-4 col-sm-4 col-md-4 col-lg-4 zoom">
+        <a href=""><img src="Img/IconsSkills/iconoNet.png" alt="iconoNet" class="mx-auto d-block"></a>
       </div>
     </div>
   </div>
 
-  <hr>
-  <div class="container">
-    <h2>
-      Contact
-    </h2>
-    <hr>
-    <form>
-      <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Email address</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+
+  <div id="Contact" class="container-fluid ">
+    <div class="row">
+      <h2>
+        Contact
+      </h2>
+      <hr>
+      <div class="container">
+        <div id="formulario">
+          <form action="https://walink.co/089270" target="_blank" class="row align-items-center">
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">E-mail</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Message</label>
+              <input type="text" class="form-control" id="exampleInputPassword1">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+
+        </div>
       </div>
-      <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword1">
-      </div>
-      <div class="mb-3 form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-        <label class="form-check-label" for="exampleCheck1">Check me out</label>
-      </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
+    </div>
+  </div>
   </div>
 </body>
 
-<footer class="py-5 bg-dark">
 
-  <div class="container">
-    <p class="m-0 text-white">2022 © JuanLopez</p>
+<footer class="py-4">
+  <div id="footer" class="container-fluid">
+    <p class="m-0 text-white" style="margin: 20px;">2022 © JuanLopez</p>
     <ul class="nav justify-content-center">
+
       <li class="nav-item ">
-        <a href="https://www.linkedin.com/in/juan-lopez-0a1b59209/"><img src="Img/iconoLinkedin.ico" alt="iconoLinkedin"></a>
+        <a href="https://www.linkedin.com/in/juan-lopez-0a1b59209/" target="_blank" rel="noreferrer noopener"><img src="Img/iconoLinkedin.ico"
+            alt="iconoLinkedin" ></a>
       </li>
-      <li class="nav-item">
-        <a href="https://github.com/JuanLop3z"><img src="Img/iconoGithub.ico" alt="iconoGithub"></a>
+      <li class="nav-item ">
+        <a href="https://github.com/JuanLop3z" target="_blank" rel="noreferrer noopener"><img src="Img/iconoGithub.ico" alt="iconoGithub"></a>
       </li>
     </ul>
   </div>
@@ -142,6 +211,23 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script src="Main.js"></script>
 
+<script>
+  $(document).ready(function () {
+    $('.zoom').hover(function () {
+      $(this).addClass('transition');
+    }, function () {
+      $(this).removeClass('transition');
+    });
+  });
+
+  function cambiar() {
+    document.getElementById("cohete").src = "Img/fuegos-artificiales.png"
+  }
+
+
+</script>
 
 </html>
