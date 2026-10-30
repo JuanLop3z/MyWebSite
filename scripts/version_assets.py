@@ -10,7 +10,11 @@ def main():
     entry = root / "index.html"
     html = entry.read_text(encoding="utf-8-sig")
 
-    for asset in ("css/styles.css", "js/Main.js", "Img/favicon.svg"):
+    for asset in (
+        "assets/css/styles.css",
+        "assets/js/main.js",
+        "assets/images/favicon.svg",
+    ):
         content = (root / asset).read_text(encoding="utf-8-sig")
         version = sha256(content.encode("utf-8")).hexdigest()[:12]
         pattern = rf'(\b(?:href|src)="){re.escape(asset)}(?:\?v=[^"\s]+)?(")'

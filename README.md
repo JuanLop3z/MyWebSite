@@ -19,13 +19,36 @@ necesarios para renderizarlo. Los enlaces de contacto y repositorios requieren
 conexion a internet. Las ilustraciones de proyectos son conceptuales.
 
 - `index.html`: contenido, enlaces y estructura semantica.
-- `css/styles.css`: paleta, temas, componentes, animaciones y puntos de quiebre.
-- `js/Main.js`: menu, tema, filtros y efectos al entrar en pantalla.
-- `Img/favicon.svg`: icono de marca.
+- `assets/css/styles.css`: paleta, temas, componentes, animaciones y puntos de quiebre.
+- `assets/js/main.js`: menu, tema, filtros y efectos al entrar en pantalla.
+- `assets/images/favicon.svg`: icono de marca.
 
 Para personalizar el perfil, editar el texto y los enlaces en `index.html`.
-Las variables al inicio de `css/styles.css` controlan la identidad visual.
+Las variables al inicio de `assets/css/styles.css` controlan la identidad visual.
 El contenido sigue disponible si JavaScript esta desactivado.
+
+## Estructura de carpetas
+
+```text
+MyWebSite/
+|-- index.html                # Pagina principal y contenido
+|-- assets/                   # Recursos que usa la V2
+|   |-- css/styles.css        # Diseno y responsive
+|   |-- js/main.js            # Interacciones del navegador
+|   `-- images/favicon.svg    # Imagenes actuales
+|-- docs/project-structure.md # Guia para ubicar y editar archivos
+|-- scripts/version_assets.py # Actualizacion de versiones de recursos
+|-- README.md                 # Inicio rapido y publicacion
+|-- .nojekyll                 # Publicacion estatica en GitHub Pages
+|-- .gitignore                # Exclusiones de Git
+`-- AGENTS.md                 # Contexto local, ignorado por Git
+```
+
+Los recursos actuales van en `assets/`; las herramientas de desarrollo, en
+`scripts/`. La V1 completa y sus imagenes permanecen en la rama `master`.
+
+Consulta [la guia de estructura](docs/project-structure.md) para saber donde
+hacer cada cambio. El sitio sigue sin necesitar compilacion.
 
 Antes de crear un commit que cambie CSS, JavaScript o el favicon, actualizar
 las versiones de sus enlaces:

@@ -1048,147 +1048,6 @@ h1 {
   box-shadow: inset -10px -8px 20px #678a4a;
   transform: rotate(-30deg);
 }
-.art-desktop {
-  background: #343d36;
-  color: #d4dfcc;
-}
-.game-mock {
-  position: absolute;
-  width: 190px;
-  top: 46px;
-  left: 50%;
-  transform: translateX(-50%) rotate(5deg);
-  background: #202922;
-  border: 1px solid #64765a;
-  border-radius: 9px;
-  padding: 14px 16px 10px;
-  box-shadow: 7px 8px 0 #2a342c;
-  transition: transform 0.4s;
-}
-.project-card:hover .game-mock {
-  transform: translateX(-50%) rotate(0deg) translateY(-4px);
-}
-.game-heading {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font: 9px var(--mono);
-  letter-spacing: 0.13em;
-}
-.game-tiny {
-  display: block;
-  font-size: 5px;
-  margin-top: 4px;
-  color: #8c9c85;
-}
-.game-led {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--lime);
-  box-shadow: 0 0 8px #c6f36b80;
-}
-.game-board {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 5px;
-  margin-top: 14px;
-}
-.game-board > span {
-  display: grid;
-  place-content: center;
-  height: 40px;
-  font-size: 34px;
-  font-weight: 300;
-  line-height: 1;
-  color: var(--lime);
-  border: 1px solid #45533e;
-  background: #2b352c;
-  border-radius: 3px;
-}
-.game-board .game-o {
-  color: #bba3e4;
-  font-size: 31px;
-}
-.game-footer {
-  display: flex;
-  justify-content: space-between;
-  font: 6px var(--mono);
-  color: #93a18a;
-  margin-top: 12px;
-}
-.art-api {
-  background: #d9cdf0;
-  color: #483c60;
-}
-.cat-api-mock {
-  position: absolute;
-  top: 57px;
-  left: 50%;
-  width: 230px;
-  background: #f3effa;
-  border: 1px solid #a391bc;
-  border-radius: 7px;
-  overflow: hidden;
-  transform: translateX(-50%) rotate(-5deg);
-  box-shadow: 7px 8px 0 #bfaddc;
-  transition: transform 0.4s;
-}
-.project-card:hover .cat-api-mock {
-  transform: translateX(-50%) rotate(0deg) translateY(-4px);
-}
-.api-request {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 12px;
-  font: 7px var(--mono);
-  border-bottom: 1px solid #d6cce5;
-}
-.api-request b {
-  color: #536e36;
-  background: #dfeaca;
-  padding: 3px 5px;
-  border-radius: 3px;
-  font-weight: 500;
-}
-.api-request i {
-  margin-left: auto;
-  font-size: 6px;
-  font-style: normal;
-  color: #566d3a;
-}
-.cat-picture {
-  position: relative;
-  display: grid;
-  place-content: center;
-  height: 126px;
-  background: radial-gradient(circle, #e4d8f4 1px, transparent 1px);
-  background-size: 12px 12px;
-}
-.cat-picture svg {
-  width: 132px;
-  height: 110px;
-}
-.cat-star {
-  position: absolute;
-  right: 25px;
-  top: 16px;
-  font-size: 25px;
-  color: #a58ac9;
-}
-.api-response {
-  padding: 10px 13px;
-  font: 7px var(--mono);
-  border-top: 1px solid #d6cce5;
-}
-.api-response > span:first-child {
-  color: #765699;
-}
-.response-dot {
-  float: right;
-  color: #87a260;
-}
 /* Stack */
 .stack-grid {
   display: grid;
@@ -1299,15 +1158,6 @@ h1 {
   background: #f6e0d6;
   color: #a14f32;
   font-size: 9px;
-}
-.skill-css {
-  background: #dce8f5;
-  color: #39699a;
-  font-size: 16px;
-}
-.skill-android {
-  background: #e0eddb;
-  color: #4d7b3c;
 }
 /* Contact and footer */
 .contact {
@@ -1531,9 +1381,6 @@ h1 {
     top: 50px;
     right: 5px;
   }
-  .cat-api-mock {
-    width: 205px;
-  }
   .project-content {
     padding: 20px;
   }
@@ -1719,48 +1566,6 @@ h1 {
     height: 60px;
     top: 55px;
     right: 6px;
-  }
-  .game-mock {
-    width: 153px;
-    padding: 12px;
-    top: 39px;
-  }
-  .game-board {
-    margin-top: 10px;
-    gap: 4px;
-  }
-  .game-board > span {
-    height: 31px;
-    font-size: 27px;
-  }
-  .game-board .game-o {
-    font-size: 24px;
-  }
-  .game-heading {
-    font-size: 7px;
-  }
-  .cat-api-mock {
-    width: 173px;
-    top: 54px;
-  }
-  .cat-picture {
-    height: 105px;
-  }
-  .cat-picture svg {
-    width: 110px;
-    height: 95px;
-  }
-  .api-request {
-    gap: 5px;
-    padding: 9px;
-    font-size: 5px;
-  }
-  .api-request i {
-    font-size: 4px;
-  }
-  .api-response {
-    padding: 9px;
-    font-size: 5px;
   }
   .tag-list {
     gap: 4px;
@@ -2160,54 +1965,6 @@ h1 {
     right: 10px;
     top: 57px;
   }
-  .game-mock {
-    width: 206px;
-    top: 49px;
-    padding: 15px 18px 12px;
-  }
-  .game-heading {
-    font-size: 10px;
-  }
-  .game-tiny {
-    font-size: 6px;
-  }
-  .game-board {
-    gap: 6px;
-    margin-top: 14px;
-  }
-  .game-board > span {
-    height: 45px;
-    font-size: 36px;
-  }
-  .game-board .game-o {
-    font-size: 32px;
-  }
-  .game-footer {
-    font-size: 7px;
-  }
-  .cat-api-mock {
-    top: 66px;
-    width: 255px;
-  }
-  .api-request {
-    padding: 13px;
-    font-size: 8px;
-    gap: 9px;
-  }
-  .api-request i {
-    font-size: 7px;
-  }
-  .cat-picture {
-    height: 143px;
-  }
-  .cat-picture svg {
-    width: 150px;
-    height: 125px;
-  }
-  .api-response {
-    padding: 13px;
-    font-size: 8px;
-  }
   .projects-bottom {
     flex-direction: column;
     align-items: flex-start;
@@ -2398,20 +2155,6 @@ h1 {
   }
   .mock-content > strong {
     font-size: 31px;
-  }
-  .cat-api-mock {
-    width: 230px;
-    top: 55px;
-  }
-  .cat-picture {
-    height: 130px;
-  }
-  .game-mock {
-    top: 40px;
-    width: 185px;
-  }
-  .game-board > span {
-    height: 38px;
   }
   .stack-group-heading .mono {
     font-size: 7px;
