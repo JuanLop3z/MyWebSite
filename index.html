@@ -1,233 +1,1026 @@
 <!doctype html>
-<html lang="en">
-
-<head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>JL/Developer</title>
-  <link rel="icon" href="Img/jlLogo.jpg">
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-  <!--Hoja de estilos-->
-  <link href="css/styles.css" rel="stylesheet" />
-
-
-</head>
-
-<body>
-  <nav id="Navbar" class="navbar navbar-expand-sm navbar-dark ">
-    <div class="container-fluid">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-        <a href="#" onclick="cambiar();"><img src="Img/petardo.png" id="cohete"></a>
-      </button>
-      <div class="collapse navbar-collapse" id="collapsibleNavbar">
-        <ul class="nav justify-content-center">
-          <li id="objetos" class="nav-item col-sm-4">
-            <a class="nav-link link-secondary zoom" aria-current="page" href="#Portafolio">Portafolio</a>
-          </li>
-          <li class="nav-item col-sm-4">
-            <a class="nav-link link-secondary zoom" href="#MySkills">MySkills</a>
-          </li>
-          <li class="nav-item col-sm-4">
-            <a class="nav-link link-secondary zoom" href="#Contact">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <div id="fondoNombre">
-    <div id="datos" class="container-fluid">
-      <div id="b">
-        <p style="color: aliceblue; font-size: 65px; font-family: Arial, Helvetica, sans-serif;">Juan Lopez</p>
-        <br />
-        <hr style="background-color: aliceblue;">
-        <h1 style="color: aliceblue; ">Backend Developer</h1>
-      </div>
-    </div>
-  </div>
-
-  <div id="quiensoy">
-    <h2>Who I am?</h2>
-    <hr>
-    <div class="container-fluid">
-      <div class="row justify-content-center">
-        <div class="col-8">
-          <p style="text-align: center; color: aliceblue; font-family: 'Courier New';">
-            I'm a software developer enthusiastic about technology and passionate
-            about learning, I certified myself in backend development in java, among
-            other things a lover of video games and self-learning<br />
-            "My philosophy has always been to be the best, not to be the first."<br />
-            Tim Cook, Apple CEO</p>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f7f8f2" />
+    <meta
+      name="description"
+      content="Juan López, desarrollador de software enfocado en .NET, Java, APIs y sistemas distribuidos. Explora mi experiencia y proyectos personales."
+    />
+    <meta property="og:title" content="Juan López — Software Developer" />
+    <meta
+      property="og:description"
+      content="Ideas claras. Código con propósito. Explora mi portafolio de desarrollo de software."
+    />
+    <meta property="og:type" content="website" />
+    <title>Juan López — Software Developer</title>
+    <link rel="icon" type="image/svg+xml" href="Img/favicon.svg" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/Main.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <header class="site-header" id="inicio">
+      <div class="container header-inner">
+        <a class="brand" href="#inicio" aria-label="Juan López, inicio"
+          ><span class="brand-symbol" aria-hidden="true">j<span>.</span>l</span
+          ><span class="brand-name"
+            >JUAN LÓPEZ<span>SOFTWARE DEVELOPER</span></span
+          ></a
+        >
+        <nav class="main-nav" id="main-nav" aria-label="Navegación principal">
+          <a href="#sobre-mi">Sobre mí</a><a href="#experiencia">Experiencia</a
+          ><a href="#proyectos">Proyectos</a><a href="#stack">Stack</a
+          ><a class="nav-contact" href="#contacto"
+            >Hablemos <span aria-hidden="true">↗</span></a
+          >
+        </nav>
+        <div class="header-actions">
+          <button
+            class="icon-button theme-toggle"
+            type="button"
+            aria-label="Activar tema oscuro"
+            aria-pressed="false"
+          >
+            <svg
+              class="moon-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+              aria-hidden="true"
+            >
+              <path
+                d="M20.7 13.1A8.8 8.8 0 0 1 10.9 3.3 8.8 8.8 0 1 0 20.7 13.1Z"
+              /></svg
+            ><svg
+              class="sun-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+              aria-hidden="true"
+            >
+              <circle cx="12" cy="12" r="4" />
+              <path
+                d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"
+              />
+            </svg>
+          </button>
+          <button
+            class="icon-button menu-toggle"
+            type="button"
+            aria-controls="main-nav"
+            aria-expanded="false"
+            aria-label="Abrir menú"
+          >
+            <span></span><span></span>
+          </button>
         </div>
       </div>
-    </div>
-  </div>
-
-
-
-  <div id="Portafolio" class="container-fluid">
-    <h2>
-      Portafolio
-    </h2>
-    <hr>
-    <div id="c">
-      <div class="jumbotron container-fluid ">
-        <div class="row ">
-          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-            <div class="card">
-              <img src="Img/jlLogoInvertido.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">MyProject</h5>
-                <p class="card-text">Is an application developed with views and jframe that includes minigames, etc.</p>
-                <a href="https://github.com/JuanLop3z/MyProject.git" target="_blank" rel="noreferrer noopener"
-                  class="btn btn-primary ">Go there</a>
+    </header>
+    <main id="contenido">
+      <section class="hero section-shell" aria-labelledby="hero-title">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">
+              <span class="status-dot" aria-hidden="true"></span> HOLA, SOY JUAN
+              LÓPEZ
+            </p>
+            <h1 id="hero-title">
+              Ideas claras.<br />Código con<br /><span class="highlight"
+                >propósito.</span
+              ><span class="title-spark" aria-hidden="true">✳</span>
+            </h1>
+            <p class="hero-description">
+              Desarrollador de software con enfoque en
+              <strong>backend, .NET y Java</strong>. Experiencia en facturación
+              electrónica, APIs y sistemas distribuidos, con foco en soluciones
+              que puedan evolucionar.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-dark" href="#proyectos"
+                >Explorar proyectos <span aria-hidden="true">↗</span></a
+              ><a
+                class="text-link"
+                href="https://github.com/JuanLop3z"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Mi GitHub
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path
+                    d="M12 .8a11.4 11.4 0 0 0-3.6 22.2c.6.1.8-.2.8-.5v-2.1c-3.4.7-4.1-1.5-4.1-1.5-.5-1.3-1.3-1.7-1.3-1.7-1.1-.8.1-.8.1-.8 1.2.1 1.9 1.2 1.9 1.2 1.1 1.9 2.8 1.4 3.5 1.1.1-.8.4-1.4.8-1.7-2.7-.3-5.6-1.4-5.6-6a4.7 4.7 0 0 1 1.3-3.3 4.4 4.4 0 0 1 .1-3.3s1-.3 3.4 1.3a11.7 11.7 0 0 1 6.2 0c2.4-1.6 3.4-1.3 3.4-1.3a4.4 4.4 0 0 1 .1 3.3 4.7 4.7 0 0 1 1.3 3.3c0 4.6-2.9 5.7-5.6 6 .4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.5A11.4 11.4 0 0 0 12 .8Z"
+                  /></svg
+              ></a>
+            </div>
+            <div class="hero-note">
+              <span aria-hidden="true">↳</span> Curiosidad constante. Soluciones
+              que evolucionan.
+            </div>
+          </div>
+          <div
+            class="hero-visual"
+            aria-label="Ilustración de un editor de código con mi perfil"
+          >
+            <div class="visual-grid" aria-hidden="true"></div>
+            <div class="orbit orbit-one" aria-hidden="true"></div>
+            <div class="orbit orbit-two" aria-hidden="true"></div>
+            <span class="floating-token token-braces" aria-hidden="true"
+              >{ }</span
+            ><span class="floating-token token-plus" aria-hidden="true">+</span>
+            <div class="code-window">
+              <div class="window-top">
+                <span class="window-dots" aria-hidden="true"
+                  ><i></i><i></i><i></i></span
+                ><span>juan.config.js</span
+                ><span class="code-mark" aria-hidden="true">&lt;/&gt;</span>
+              </div>
+              <div class="editor-body">
+                <div class="line-numbers" aria-hidden="true">
+                  01<br />02<br />03<br />04<br />05<br />06<br />07<br />08<br />09<br />10<br />11
+                </div>
+                <pre><code><span class="syntax-purple">const</span> developer <span class="syntax-purple">=</span> {
+  name: <span class="syntax-green">'Juan López'</span>,
+  focus: <span class="syntax-green">'Backend'</span>,
+  stack: [
+    <span class="syntax-green">'Java'</span>, <span class="syntax-green">'Spring Boot'</span>,
+    <span class="syntax-green">'C#'</span>, <span class="syntax-green">'SQL'</span>
+  ],
+  mindset: <span class="syntax-green">'Always learning'</span>,
+  <span class="syntax-blue">build</span>: () <span class="syntax-purple">=&gt;</span> <span class="syntax-green">'Make it happen'</span>
+};
+<span class="syntax-muted">// Una idea. Infinitas posibilidades.</span><span class="code-caret" aria-hidden="true"></span></code></pre>
+              </div>
+              <div class="editor-status">
+                <span><i aria-hidden="true"></i> v2</span
+                ><span
+                  >UTF-8 <span class="status-language">JavaScript</span></span
+                >
+              </div>
+            </div>
+            <div class="floating-note">
+              <span class="note-icon" aria-hidden="true">↗</span>
+              <div>
+                De la idea al código.<small>Una solución a la vez.</small>
+              </div>
+              <span class="note-star" aria-hidden="true">✳</span>
+            </div>
+            <div class="visual-caption">
+              <span aria-hidden="true">○</span> BUILD · LEARN · REPEAT
+            </div>
+          </div>
+        </div>
+        <div class="container hero-bottom">
+          <a href="#sobre-mi" class="scroll-hint"
+            ><span aria-hidden="true">↓</span> UN POCO MÁS SOBRE MÍ</a
+          ><span class="hero-location"
+            >PENSADO CON LÓGICA. HECHO CON CREATIVIDAD.</span
+          >
+        </div>
+      </section>
+      <div
+        class="tech-ribbon"
+        aria-label="Enfoques: backend, desarrollo web, bases de datos y aprendizaje continuo"
+      >
+        <div class="container ribbon-inner">
+          <span>BACKEND DEVELOPMENT</span><i aria-hidden="true">✳</i
+          ><span>WEB EXPERIENCES</span><i aria-hidden="true">✳</i
+          ><span>DATABASES</span><i aria-hidden="true">✳</i
+          ><span>ALWAYS LEARNING</span>
+        </div>
+      </div>
+      <section
+        class="about section-shell"
+        id="sobre-mi"
+        aria-labelledby="about-title"
+      >
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">
+              <span class="section-index">01 /</span> DETRÁS DEL CÓDIGO
+            </p>
+            <h2 id="about-title">
+              La curiosidad es mi<br />mejor
+              <span class="serif-word">punto de partida.</span>
+            </h2>
+          </div>
+          <div class="about-grid">
+            <div class="about-story reveal">
+              <p>
+                Construyo soluciones backend que conectan
+                <strong>procesos, datos y personas.</strong>
+              </p>
+              <p>
+                He trabajado en facturación electrónica, integración de APIs
+                para dispositivos autoatendidos y sistemas de inventario. Mi
+                experiencia combina desarrollo con .NET y Java, bases de datos
+                relacionales y trabajo con equipos de desarrollo y soporte.
+              </p>
+              <p>
+                Me interesa entender el problema completo: desde la lógica de
+                negocio hasta la operación del sistema. Sigo aprendiendo,
+                explorando nuevas herramientas y llevando esa curiosidad a mis
+                proyectos personales.
+              </p>
+              <a
+                class="text-link"
+                href="https://www.linkedin.com/in/juan-lopez-0a1b59209/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Conoce mi perfil en LinkedIn
+                <span aria-hidden="true">↗</span></a
+              >
+            </div>
+            <div class="principles-card reveal">
+              <div class="principles-top">
+                <span class="mono">MI FORMA DE CONSTRUIR</span
+                ><span aria-hidden="true">✳</span>
+              </div>
+              <ol>
+                <li>
+                  <span>01</span>
+                  <div>
+                    <h3>Entender primero.</h3>
+                    <p>Una buena solución empieza con la pregunta correcta.</p>
+                  </div>
+                </li>
+                <li>
+                  <span>02</span>
+                  <div>
+                    <h3>Hacerlo claro.</h3>
+                    <p>Código que pueda leerse, mantenerse y evolucionar.</p>
+                  </div>
+                </li>
+                <li>
+                  <span>03</span>
+                  <div>
+                    <h3>Seguir explorando.</h3>
+                    <p>Cada proyecto es una oportunidad para aprender.</p>
+                  </div>
+                </li>
+              </ol>
+              <span class="card-footnote mono"
+                >CURIOSITY IS PART OF THE PROCESS_</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="experience section-shell"
+        id="experiencia"
+        aria-labelledby="experience-title"
+      >
+        <div class="container">
+          <div class="section-heading section-heading-row reveal">
+            <div>
+              <p class="eyebrow">
+                <span class="section-index">02 /</span> EXPERIENCIA PROFESIONAL
+              </p>
+              <h2 id="experience-title">
+                Más allá del código.<br /><span class="serif-word"
+                  >Impacto en la operación.</span
+                >
+              </h2>
+            </div>
+            <p class="section-description">
+              Desarrollo, integración y liderazgo.<br />Soluciones que acompañan
+              procesos reales.
+            </p>
+          </div>
+          <div
+            class="impact-grid reveal"
+            aria-label="Alcance del rol en INSEPET, de septiembre de 2023 a junio de 2025"
+          >
+            <div class="impact-stat">
+              <strong>30.000<span>+</span></strong>
+              <p>
+                transacciones diarias en sistemas<br />de facturación
+                electrónica
+              </p>
+            </div>
+            <div class="impact-stat">
+              <strong>04<span>↗</span></strong>
+              <p>desarrolladores<br />coordinados</p>
+            </div>
+            <div class="impact-stat">
+              <strong>11<span>↗</span></strong>
+              <p>personas en el equipo<br />de soporte liderado</p>
+            </div>
+          </div>
+          <p class="impact-caption mono">
+            ALCANCE DEL ROL EN INSEPET · 2023 — 2025
+          </p>
+          <div class="experience-layout">
+            <div class="career-timeline">
+              <article class="career-entry reveal">
+                <div class="career-date mono">
+                  <time datetime="2023-09">SEP 2023</time> —
+                  <time datetime="2025-06">JUN 2025</time>
+                </div>
+                <h3>Ingeniero de Proyectos</h3>
+                <p class="career-company">INSEPET SAS</p>
+                <ul>
+                  <li>
+                    Responsable del área de facturación electrónica con la DIAN
+                    y de mejoras estructurales en sistemas distribuidos.
+                  </li>
+                  <li>
+                    Desarrollo del módulo API para dispositivos autoatendidos,
+                    con integración de datos en la nube.
+                  </li>
+                  <li>
+                    Participación en la migración a microservicios con .NET Core
+                    y en la optimización del proceso de despliegue.
+                  </li>
+                </ul>
+                <ul class="tag-list" aria-label="Enfoques del cargo">
+                  <li>.NET Core</li>
+                  <li>Microservicios</li>
+                  <li>APIs</li>
+                  <li>Liderazgo técnico</li>
+                </ul>
+              </article>
+              <article class="career-entry reveal">
+                <div class="career-date mono">
+                  <time datetime="2023-05">MAY 2023</time> —
+                  <time datetime="2023-06">JUN 2023</time>
+                </div>
+                <h3>Desarrollador trainee · Pasantía</h3>
+                <p class="career-company">Sophos Solutions</p>
+                <ul>
+                  <li>
+                    Desarrollo colaborativo con Java, Hibernate y PostgreSQL
+                    bajo el marco Scrum.
+                  </li>
+                  <li>
+                    Trabajo en calidad de código e integración continua junto al
+                    equipo de desarrollo.
+                  </li>
+                </ul>
+                <ul class="tag-list" aria-label="Tecnologías del cargo">
+                  <li>Java</li>
+                  <li>Hibernate</li>
+                  <li>PostgreSQL</li>
+                  <li>Scrum</li>
+                </ul>
+              </article>
+              <article class="career-entry reveal">
+                <div class="career-date mono">
+                  <time datetime="2022-04">ABR 2022</time> —
+                  <time datetime="2023-04">ABR 2023</time>
+                </div>
+                <h3>Desarrollador independiente</h3>
+                <p class="career-company">Comunitaria de Salud JL</p>
+                <ul>
+                  <li>
+                    Creación de un sistema de inventario y facturación con C#,
+                    Entity Framework Core y procedimientos almacenados.
+                  </li>
+                  <li>
+                    Reportes de ventas para apoyar la toma de decisiones,
+                    aplicando principios SOLID y arquitectura limpia.
+                  </li>
+                </ul>
+                <ul class="tag-list" aria-label="Tecnologías del cargo">
+                  <li>C#</li>
+                  <li>EF Core</li>
+                  <li>SQL</li>
+                  <li>SOLID</li>
+                </ul>
+              </article>
+            </div>
+            <aside
+              class="education-card reveal"
+              aria-labelledby="education-title"
+            >
+              <div class="education-heading">
+                <p class="mono">APRENDER PARA CONSTRUIR</p>
+                <span aria-hidden="true">✳</span>
+              </div>
+              <h3 id="education-title">Formación continua.</h3>
+              <ul class="education-list">
+                <li>
+                  <span class="education-label">INGENIERÍA DE SOFTWARE</span
+                  ><strong>Universidad Iberoamericana</strong
+                  ><span>En curso</span>
+                </li>
+                <li>
+                  <span class="education-label">DESARROLLO DE SOFTWARE</span
+                  ><strong>Politécnico Internacional</strong
+                  ><span>Desarrollo de software y aplicativos móviles</span>
+                </li>
+                <li>
+                  <span class="education-label">JAVA BACKEND</span
+                  ><strong>Platzi</strong
+                  ><span>Formación certificada en desarrollo backend</span>
+                </li>
+              </ul>
+              <div class="education-extra">
+                <span class="mono">TAMBIÉN EN MI FORMACIÓN</span>
+                <p>Oracle DB · DevOps y contenedores</p>
+              </div>
+              <div class="language-note">
+                <span aria-hidden="true">↗</span>
+                <div>
+                  Inglés <strong>B1</strong><small>Evolve Your English</small>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+      <section
+        class="projects section-shell"
+        id="proyectos"
+        aria-labelledby="projects-title"
+      >
+        <div class="container">
+          <div class="section-heading section-heading-row reveal">
+            <div>
+              <p class="eyebrow">
+                <span class="section-index">03 /</span> PROYECTOS PERSONALES
+              </p>
+              <h2 id="projects-title">
+                Problemas distintos.<br />La misma
+                <span class="serif-word">curiosidad.</span>
+              </h2>
+            </div>
+            <p class="section-description">
+              Una selección de mi trabajo en GitHub.<br />Del backend a la
+              interfaz.
+            </p>
+          </div>
+          <div class="project-toolbar reveal">
+            <div
+              class="project-filters"
+              role="group"
+              aria-label="Filtrar proyectos"
+            >
+              <button
+                class="filter-button is-active"
+                type="button"
+                data-filter="all"
+                aria-pressed="true"
+              >
+                Todos <span data-project-total>06</span></button
+              ><button
+                class="filter-button"
+                type="button"
+                data-filter="web"
+                aria-pressed="false"
+              >
+                Web & full stack</button
+              ><button
+                class="filter-button"
+                type="button"
+                data-filter="api"
+                aria-pressed="false"
+              >
+                Backend</button
+              ><button
+                class="filter-button"
+                type="button"
+                data-filter="desktop"
+                aria-pressed="false"
+              >
+                Escritorio
+              </button>
+            </div>
+            <span
+              class="project-count mono"
+              role="status"
+              aria-live="polite"
+              aria-atomic="true"
+              >06 PROYECTOS</span
+            >
+          </div>
+          <div class="project-grid">
+            <article class="project-card reveal" data-category="web">
+              <a
+                class="project-art art-inventory"
+                href="https://github.com/JuanLop3z/GestionInventariado"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Ver código de Gestión de inventario en GitHub"
+                ><span class="art-label mono">PERSONAL PROJECT / 01</span>
+                <div class="inventory-mock project-diagram" aria-hidden="true">
+                  <div class="diagram-top">
+                    <span>INVENTARIO</span><span>●</span>
+                  </div>
+                  <div class="inventory-tabs">
+                    <span>Productos</span><span>Movimientos</span>
+                  </div>
+                  <div class="inventory-flow">
+                    <span>ENTRADA <b>↗</b></span
+                    ><span>SALIDA <b>↙</b></span>
+                  </div>
+                  <div class="inventory-table">
+                    <i></i><i></i><i></i><i></i>
+                  </div>
+                  <div class="diagram-foot">
+                    API .NET <span>↔</span> ANGULAR
+                  </div>
+                </div>
+                <span class="project-open" aria-hidden="true">↗</span></a
+              >
+              <div class="project-content">
+                <div class="project-meta mono">
+                  <span>FULL STACK · PRUEBA TÉCNICA</span><span>01</span>
+                </div>
+                <h3>
+                  <a
+                    href="https://github.com/JuanLop3z/GestionInventariado"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Gestión de inventario <span aria-hidden="true">↗</span></a
+                  >
+                </h3>
+                <p>
+                  Entradas, salidas y consulta de productos en una aplicación
+                  con API .NET, frontend Angular y autenticación JWT.
+                </p>
+                <ul class="tag-list" aria-label="Tecnologías">
+                  <li>.NET 9</li>
+                  <li>Angular</li>
+                  <li>PostgreSQL</li>
+                  <li>JWT</li>
+                </ul>
+              </div>
+            </article>
+            <article class="project-card reveal" data-category="web">
+              <a
+                class="project-art art-pymes"
+                href="https://github.com/JuanLop3z/ManagamentPYMES"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Ver código de Gestión para pymes en GitHub"
+                ><span class="art-label mono">PERSONAL PROJECT / 02</span>
+                <div class="pymes-mock project-diagram" aria-hidden="true">
+                  <div class="diagram-top">
+                    <span>GMM / PYMES</span><span>✳</span>
+                  </div>
+                  <div class="pymes-title">
+                    Menos pendientes.<br /><em>Más control.</em>
+                  </div>
+                  <div class="pymes-board">
+                    <div><span>ABIERTAS</span><i></i><i></i></div>
+                    <b>→</b>
+                    <div><span>CERRADAS</span><i>✓</i></div>
+                  </div>
+                  <div class="diagram-foot">
+                    ACTIVOS · ÓRDENES · MANTENIMIENTO
+                  </div>
+                </div>
+                <span class="project-open" aria-hidden="true">↗</span></a
+              >
+              <div class="project-content">
+                <div class="project-meta mono">
+                  <span>APLICACIÓN WEB · PYTHON</span><span>02</span>
+                </div>
+                <h3>
+                  <a
+                    href="https://github.com/JuanLop3z/ManagamentPYMES"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Gestión para pymes <span aria-hidden="true">↗</span></a
+                  >
+                </h3>
+                <p>
+                  Gestión local de activos y órdenes de mantenimiento. Un flujo
+                  sencillo para registrar equipos, crear órdenes y cerrarlas.
+                </p>
+                <ul class="tag-list" aria-label="Tecnologías">
+                  <li>Python</li>
+                  <li>Flask</li>
+                  <li>SQLite</li>
+                  <li>SQLAlchemy</li>
+                </ul>
+              </div>
+            </article>
+            <article class="project-card reveal" data-category="web">
+              <a
+                class="project-art art-store"
+                href="https://github.com/JuanLop3z/VIdeogamesStore"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Ver código de VideoGamesStore en GitHub"
+                ><span class="art-label mono">PERSONAL PROJECT / 03</span>
+                <div class="store-mock project-diagram" aria-hidden="true">
+                  <div class="diagram-top">
+                    <span>VIDEOGAMES / STORE</span><span>+</span>
+                  </div>
+                  <div class="store-covers">
+                    <div><span>01</span><b>PLAY</b><i>✳</i></div>
+                    <div><span>02</span><b>RENT</b><i>↗</i></div>
+                    <div><span>03</span><b>REPEAT</b><i>↻</i></div>
+                  </div>
+                  <div class="diagram-foot">
+                    CATÁLOGO <span>→</span> ALQUILERES
+                  </div>
+                </div>
+                <span class="project-open" aria-hidden="true">↗</span></a
+              >
+              <div class="project-content">
+                <div class="project-meta mono">
+                  <span>APLICACIÓN WEB · EN DESARROLLO</span><span>03</span>
+                </div>
+                <h3>
+                  <a
+                    href="https://github.com/JuanLop3z/VIdeogamesStore"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >VideoGamesStore <span aria-hidden="true">↗</span></a
+                  >
+                </h3>
+                <p>
+                  Proyecto de gestión de alquileres de videojuegos: clientes,
+                  títulos, precios y consultas, con modelado relacional en SQL
+                  Server.
+                </p>
+                <ul class="tag-list" aria-label="Tecnologías">
+                  <li>C#</li>
+                  <li>ASP.NET</li>
+                  <li>SQL Server</li>
+                </ul>
+              </div>
+            </article>
+            <article class="project-card reveal" data-category="api">
+              <a
+                class="project-art art-services"
+                href="https://github.com/JuanLop3z/Microservices-EDS"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Ver código de Microservices EDS en GitHub"
+                ><span class="art-label mono">PERSONAL PROJECT / 04</span>
+                <div class="services-mock project-diagram" aria-hidden="true">
+                  <div class="diagram-top">
+                    <span>PRODUCT SERVICE</span><span>{ }</span>
+                  </div>
+                  <div class="service-core">
+                    PRODUCTOS <span>&lt;/&gt;</span>
+                  </div>
+                  <div class="service-connectors"><i></i><i></i><i></i></div>
+                  <div class="service-nodes">
+                    <span>DOMINIO</span><span>DATOS</span><span>CONSULTAS</span>
+                  </div>
+                  <div class="diagram-foot">SEPARATION OF CONCERNS_</div>
+                </div>
+                <span class="project-open" aria-hidden="true">↗</span></a
+              >
+              <div class="project-content">
+                <div class="project-meta mono">
+                  <span>LABORATORIO .NET · EN DESARROLLO</span><span>04</span>
+                </div>
+                <h3>
+                  <a
+                    href="https://github.com/JuanLop3z/Microservices-EDS"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Microservices EDS <span aria-hidden="true">↗</span></a
+                  >
+                </h3>
+                <p>
+                  Exploración de un servicio de productos con capas de dominio,
+                  persistencia y consultas paginadas mediante Entity Framework
+                  Core.
+                </p>
+                <ul class="tag-list" aria-label="Tecnologías">
+                  <li>C#</li>
+                  <li>.NET</li>
+                  <li>EF Core</li>
+                  <li>Arquitectura</li>
+                </ul>
+              </div>
+            </article>
+            <article class="project-card reveal" data-category="web">
+              <a
+                class="project-art art-web"
+                href="https://github.com/JuanLop3z/Technoharwd_Project"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Ver código de Technoharwd en GitHub"
+                ><span class="art-label mono">PERSONAL PROJECT / 05</span>
+                <div class="browser-mock" aria-hidden="true">
+                  <div class="mock-toolbar">
+                    <span>● ● ●</span><span>technoharwd.app</span>
+                  </div>
+                  <div class="mock-page">
+                    <div class="mock-nav">
+                      <b>t<span>h.</span></b
+                      ><span
+                        >INICIO&nbsp;&nbsp; EQUIPO&nbsp;&nbsp; CONTACTO</span
+                      >
+                    </div>
+                    <div class="mock-content">
+                      <small>TECHNOLOGY MEETS IDEAS</small
+                      ><strong>Think it.<br /><em>Build it.</em></strong
+                      ><span class="mock-cta">Explorar ↗</span>
+                    </div>
+                    <div class="mock-orb"></div>
+                  </div>
+                </div>
+                <span class="project-open" aria-hidden="true">↗</span></a
+              >
+              <div class="project-content">
+                <div class="project-meta mono">
+                  <span>DESARROLLO WEB · ASP.NET</span><span>05</span>
+                </div>
+                <h3>
+                  <a
+                    href="https://github.com/JuanLop3z/Technoharwd_Project"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Technoharwd <span aria-hidden="true">↗</span></a
+                  >
+                </h3>
+                <p>
+                  Un proyecto web para explorar el desarrollo con C#, ASP.NET y
+                  componentes de interfaz con Bootstrap.
+                </p>
+                <ul class="tag-list" aria-label="Tecnologías">
+                  <li>C#</li>
+                  <li>ASP.NET</li>
+                  <li>Bootstrap</li>
+                </ul>
+              </div>
+            </article>
+            <article class="project-card reveal" data-category="desktop">
+              <a
+                class="project-art art-converter"
+                href="https://github.com/JuanLop3z/AllConverter"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Ver código de AllConverter en GitHub"
+                ><span class="art-label mono">PERSONAL PROJECT / 06</span>
+                <div class="converter-mock project-diagram" aria-hidden="true">
+                  <div class="diagram-top">
+                    <span>ALL / CONVERTER</span><span>⇄</span>
+                  </div>
+                  <div class="converter-value">
+                    <small>CELSIUS</small><strong>25<span>°C</span></strong>
+                  </div>
+                  <div class="converter-arrow">↓</div>
+                  <div class="converter-result">
+                    <span>FAHRENHEIT</span><strong>77°F</strong>
+                  </div>
+                  <div class="diagram-foot">TEMPERATURA · PESO · TIEMPO</div>
+                </div>
+                <span class="project-open" aria-hidden="true">↗</span></a
+              >
+              <div class="project-content">
+                <div class="project-meta mono">
+                  <span>APLICACIÓN DE ESCRITORIO · JAVA</span><span>06</span>
+                </div>
+                <h3>
+                  <a
+                    href="https://github.com/JuanLop3z/AllConverter"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >AllConverter <span aria-hidden="true">↗</span></a
+                  >
+                </h3>
+                <p>
+                  Conversor de temperatura, peso y tiempo con interfaces Swing.
+                  Incluye documentación de casos de uso y un plan de pruebas.
+                </p>
+                <ul class="tag-list" aria-label="Tecnologías">
+                  <li>Java</li>
+                  <li>Swing</li>
+                  <li>Maven</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+          <div class="projects-bottom">
+            <span
+              >Ilustraciones conceptuales. El código de cada proyecto está en
+              GitHub.</span
+            ><a
+              class="text-link"
+              href="https://github.com/JuanLop3z?tab=repositories"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Explorar todos los repositorios
+              <span aria-hidden="true">↗</span></a
+            >
+          </div>
+        </div>
+      </section>
+      <section
+        class="stack section-shell"
+        id="stack"
+        aria-labelledby="stack-title"
+      >
+        <div class="container stack-grid">
+          <div class="section-heading reveal">
+            <p class="eyebrow">
+              <span class="section-index">04 /</span> MI CAJA DE HERRAMIENTAS
+            </p>
+            <h2 id="stack-title">
+              La tecnología<br />al servicio de<br /><span class="serif-word"
+                >la idea.</span
+              >
+            </h2>
+            <p class="stack-description">
+              Herramientas que conectan mi experiencia profesional con mis
+              proyectos personales: desarrollo backend, datos, interfaces y
+              entornos de ejecución.
+            </p>
+            <div class="stack-note">
+              <span aria-hidden="true">↗</span> El stack evoluciona.<br />Las
+              ganas de construir, también.
+            </div>
+            <div class="engineering-practices">
+              <h3>Cómo conecto las piezas</h3>
+              <ul class="tag-list" aria-label="Prácticas de ingeniería">
+                <li>REST / SOAP</li>
+                <li>Microservicios</li>
+                <li>async / await</li>
+                <li>SOLID</li>
+                <li>Scrum / Kanban</li>
+              </ul>
+            </div>
+          </div>
+          <div class="stack-groups reveal">
+            <div class="stack-group">
+              <div class="stack-group-heading">
+                <h3>Backend</h3>
+                <span class="mono">01 — CORE</span>
+              </div>
+              <div class="skills-grid">
+                <div class="skill">
+                  <span class="skill-symbol skill-csharp" aria-hidden="true"
+                    >C#</span
+                  ><span>C# / .NET</span>
+                </div>
+                <div class="skill">
+                  <span class="skill-symbol skill-java" aria-hidden="true"
+                    >Jv</span
+                  ><span>Java</span>
+                </div>
+                <div class="skill">
+                  <span class="skill-symbol skill-spring" aria-hidden="true"
+                    >S</span
+                  ><span>Spring Boot</span>
+                </div>
+                <div class="skill">
+                  <span class="skill-symbol skill-python" aria-hidden="true"
+                    >Py</span
+                  ><span>Python / Flask</span>
+                </div>
+              </div>
+            </div>
+            <div class="stack-group">
+              <div class="stack-group-heading">
+                <h3>Datos & persistencia</h3>
+                <span class="mono">02 — DATA</span>
+              </div>
+              <div class="skills-grid">
+                <div class="skill">
+                  <span class="skill-symbol skill-sql" aria-hidden="true"
+                    >SQL</span
+                  ><span>SQL Server</span>
+                </div>
+                <div class="skill">
+                  <span class="skill-symbol skill-postgres" aria-hidden="true"
+                    >Pg</span
+                  ><span>PostgreSQL</span>
+                </div>
+                <div class="skill">
+                  <span class="skill-symbol skill-net" aria-hidden="true"
+                    >EF</span
+                  ><span>EF Core</span>
+                </div>
+                <div class="skill">
+                  <span class="skill-symbol skill-hibernate" aria-hidden="true"
+                    >H</span
+                  ><span>Hibernate</span>
+                </div>
+              </div>
+            </div>
+            <div class="stack-group">
+              <div class="stack-group-heading">
+                <h3>Web & interfaces</h3>
+                <span class="mono">03 — EXPERIENCE</span>
+              </div>
+              <div class="skills-grid">
+                <div class="skill">
+                  <span class="skill-symbol skill-angular" aria-hidden="true"
+                    >A</span
+                  ><span>Angular</span>
+                </div>
+                <div class="skill">
+                  <span class="skill-symbol skill-typescript" aria-hidden="true"
+                    >TS</span
+                  ><span>TypeScript</span>
+                </div>
+                <div class="skill">
+                  <span class="skill-symbol skill-js" aria-hidden="true"
+                    >JS</span
+                  ><span>JavaScript</span>
+                </div>
+                <div class="skill">
+                  <span class="skill-symbol skill-html" aria-hidden="true"
+                    >&lt;/&gt;</span
+                  ><span>HTML / CSS</span>
+                </div>
+              </div>
+            </div>
+            <div class="stack-group">
+              <div class="stack-group-heading">
+                <h3>Entrega & entornos</h3>
+                <span class="mono">04 — DELIVERY</span>
+              </div>
+              <div class="skills-grid">
+                <div class="skill">
+                  <span class="skill-symbol skill-docker" aria-hidden="true"
+                    >D</span
+                  ><span>Docker</span>
+                </div>
+                <div class="skill">
+                  <span class="skill-symbol skill-kubernetes" aria-hidden="true"
+                    >K8s</span
+                  ><span>Kubernetes</span>
+                </div>
+                <div class="skill">
+                  <span class="skill-symbol skill-linux" aria-hidden="true"
+                    >Lx</span
+                  ><span>Linux</span>
+                </div>
+                <div class="skill">
+                  <span class="skill-symbol skill-git" aria-hidden="true"
+                    >Git</span
+                  ><span>Git</span>
+                </div>
               </div>
             </div>
           </div>
-          <div class=" col-xs-4 col-sm-4 col-md-4 col-lg-4">
-            <div class="card">
-              <img src="Img/jlLogoInvertido.jpg" class="card-img-top" class="mx-auto d-block" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Website Technoharwd</h5>
-                <p class="card-text">Web-site developed in c# with ASP.Net and Bootstrap</p>
-                <a href="https://github.com/JuanLop3z/Technoharwd_Project.git" target="_blank" rel="noreferrer noopener"
-                  class="btn btn-primary " style="margin-top: 30px;">Go there</a>
+        </div>
+      </section>
+      <section
+        class="contact section-shell"
+        id="contacto"
+        aria-labelledby="contact-title"
+      >
+        <div class="container">
+          <div class="contact-panel reveal">
+            <div class="contact-content">
+              <p class="eyebrow">
+                <span class="section-index">05 /</span> EL SIGUIENTE PASO
+              </p>
+              <h2 id="contact-title">
+                Las buenas ideas<br />empiezan con un<br /><span
+                  class="serif-word"
+                  >hola.</span
+                ><span class="contact-asterisk" aria-hidden="true">✳</span>
+              </h2>
+              <p>
+                ¿Un proyecto, una oportunidad o una buena conversación sobre
+                tecnología? Conectemos.
+              </p>
+              <div class="contact-actions">
+                <a
+                  class="button button-dark"
+                  href="https://walink.co/089270"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Hablemos por WhatsApp <span aria-hidden="true">↗</span></a
+                ><a
+                  class="text-link"
+                  href="https://www.linkedin.com/in/juan-lopez-0a1b59209/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >LinkedIn <span aria-hidden="true">↗</span></a
+                >
               </div>
             </div>
-          </div>
-          <div class=" col-xs-4 col-sm-4 col-md-4 col-lg-4">
-            <div class="card">
-              <img src="Img/jlLogoInvertido.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Cats Api</h5>
-                <p class="card-text">Simple api test</p>
-                <a href="https://github.com/JuanLop3z/Cats_Api.git" target="_blank" rel="noreferrer noopener"
-                  class="btn btn-primary " style="margin-top: 50px;">Go there</a>
-              </div>
+            <div class="contact-art" aria-hidden="true">
+              <div class="contact-orbit"></div>
+              <div class="contact-orbit contact-orbit-two"></div>
+              <span class="contact-at">@</span
+              ><span class="contact-art-label mono"
+                >LET'S BUILD SOMETHING GOOD.</span
+              >
             </div>
           </div>
         </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <a class="footer-signature" href="#inicio"
+          >Juan López<span>Un trabajo en constante evolución.</span></a
+        >
+        <p>
+          © <span id="year">2026</span> · Hecho con intención
+          <span class="footer-star" aria-hidden="true">✳</span>
+        </p>
+        <a class="back-top text-link" href="#inicio"
+          >Volver arriba <span aria-hidden="true">↑</span></a
+        >
       </div>
-    </div>
-  </div>
-
-
-
-  <div id="MySkills" class="container-fluid ">
-    <h2>
-      MySkills
-    </h2>
-    <hr>
-    <div class="row align-items-center ">
-      <div id="caja" class="shadow-lg p-3 mb-5 rounded col-xs-4 col-sm-4 col-md-4 col-lg-4  zoom ">
-        <a href=""><img src="Img/IconsSkills/iconoHTML.ico" alt="iconoHTML" class="mx-auto d-block"></a>
-      </div>
-      <div id="caja" class="shadow-lg p-3 mb-5 rounded col-xs-2 col-sm-4 col-md-4 col-lg-4  zoom">
-        <a href=""><img src="Img/IconsSkills/iconoCSS.ico" alt="iconoCSS" class="mx-auto d-block"></a>
-      </div>
-      <div id="caja" class=" shadow-lg p-3 mb-5 rounded col-xs-2 col-sm-4 col-md-4 col-lg-4  zoom">
-        <a href=""><img src="Img/IconsSkills/iconoJS.ico" alt="iconoJS" class="mx-auto d-block"></a>
-      </div>
-    </div>
-    <div class="row align-items-center">
-      <div id="caja" class="shadow-lg p-3 mb-5 rounded col-xs-4 col-sm-4 col-md-4 col-lg-4 zoom">
-        <a href=""><img src="Img/IconsSkills/iconoJava.ico" alt="iconoJava" class="mx-auto d-block"></a>
-      </div>
-      <div id="caja" class="shadow-lg p-3 mb-5 rounded col-xs-2 col-sm-4 col-md-4 col-lg-4 zoom">
-        <a href=""><img src="Img/IconsSkills/iconoCharp.ico" alt="iconoC#" class="mx-auto d-block"
-            style="width: 128px; height:128px ;"></a>
-      </div>
-      <div id="caja" class="shadow-lg p-3 mb-5 rounded col-xs-2 col-sm-4 col-md-4 col-lg-4 zoom">
-        <a href=""><img src="Img/IconsSkills/iconoSQLServer.png" alt="iconoSQLServer" class="mx-auto d-block"></a>
-      </div>
-    </div>
-    <div class="row align-items-center">
-      <div id="caja" class="shadow-lg p-3 mb-5 rounded col-xs-4 col-sm-4 col-md-4 col-lg-4 zoom">
-        <a href=""><img src="Img/IconsSkills/iconoAndroidstudio.ico" alt="iconoAndroidstudio" class="mx-auto d-block"
-            style="margin-top: 45px"></a>
-      </div>
-      <div id="caja" class="shadow-lg p-3 mb-5 rounded col-xs-2 col-sm-4 col-md-4 col-lg-4 zoom">
-        <a href=""><img src="Img/IconsSkills/iconoSpring-boot.ico" alt="iconoSpring-boot" class="mx-auto d-block"
-            style="width: 128px; height:67px ;margin-top: 20px"></a>
-      </div>
-      <div id="caja" class="shadow-lg p-3 mb-5 rounded col-xs-2 col-sm-4 col-md-4 col-lg-4 zoom">
-        <a href=""><img src="Img/IconsSkills/iconoSpring.ico" alt="iconoSprings" class="mx-auto d-block"
-            style="width: 128px; height:85px; margin-top: 15px;"></a>
-      </div>
-    </div>
-    <div class="row align-items-center justify-content-center">
-      <div id="caja" class="shadow-lg p-3 mb-5 rounded col-xs-4 col-sm-4 col-md-4 col-lg-4 zoom">
-        <a href=""><img src="Img/IconsSkills/iconoNet.png" alt="iconoNet" class="mx-auto d-block"></a>
-      </div>
-    </div>
-  </div>
-
-
-  <div id="Contact" class="container-fluid ">
-    <div class="row">
-      <h2>
-        Contact
-      </h2>
-      <hr>
-      <div class="container">
-        <div id="formulario">
-          <form action="https://walink.co/089270" target="_blank" class="row align-items-center">
-            <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">E-mail</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-            </div>
-            <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label">Message</label>
-              <input type="text" class="form-control" id="exampleInputPassword1">
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-          </form>
-
-        </div>
-      </div>
-    </div>
-  </div>
-  </div>
-</body>
-
-
-<footer class="py-4">
-  <div id="footer" class="container-fluid">
-    <p class="m-0 text-white" style="margin: 20px;">2022 © JuanLopez</p>
-    <ul class="nav justify-content-center">
-
-      <li class="nav-item ">
-        <a href="https://www.linkedin.com/in/juan-lopez-0a1b59209/" target="_blank" rel="noreferrer noopener"><img src="Img/iconoLinkedin.ico"
-            alt="iconoLinkedin" ></a>
-      </li>
-      <li class="nav-item ">
-        <a href="https://github.com/JuanLop3z" target="_blank" rel="noreferrer noopener"><img src="Img/iconoGithub.ico" alt="iconoGithub"></a>
-      </li>
-    </ul>
-  </div>
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
-<script src="js/Main.js"></script>
-
-<script>
-  $(document).ready(function () {
-    $('.zoom').hover(function () {
-      $(this).addClass('transition');
-    }, function () {
-      $(this).removeClass('transition');
-    });
-  });
-
-  function cambiar() {
-    document.getElementById("cohete").src = "Img/fuegos-artificiales.png"
-  }
-
-
-</script>
-
+    </footer>
+  </body>
 </html>
