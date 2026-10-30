@@ -136,11 +136,15 @@
         revealObserver.observe(element);
       });
     }
+    function showRemainingContent() {
+      reveals.forEach((element) => element.classList.remove("is-waiting"));
+      revealObserver.disconnect();
+    }
     motionPreference.addEventListener("change", (event) => {
-      if (event.matches) {
-        reveals.forEach((element) => element.classList.remove("is-waiting"));
-        revealObserver.disconnect();
-      }
+      if (event.matches) showRemainingContent();
+    });
+    window.addEventListener("portfolio:motionchange", (event) => {
+      if (event.detail.paused) showRemainingContent();
     });
 
     const sectionLinks = [...navigation.querySelectorAll('a[href^="#"]')];

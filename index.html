@@ -15,13 +15,20 @@
     />
     <meta property="og:type" content="website" />
     <title>Juan López — Software Developer</title>
-    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg?v=aa23b4e53493" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="assets/images/favicon.svg?v=aa23b4e53493"
+    />
     <link rel="stylesheet" href="assets/css/styles.css?v=dbc7bbec390d" />
-    <script src="assets/js/main.js?v=07bedf68eca3" defer></script>
+    <link rel="stylesheet" href="assets/css/effects.css?v=0b919a16c4f0" />
+    <script src="assets/js/main.js?v=9a02cd173ea3" defer></script>
+    <script src="assets/js/effects.js?v=9840ad97bfdf" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#contenido">Saltar al contenido</a>
     <header class="site-header" id="inicio">
+      <span class="reading-progress" aria-hidden="true"></span>
       <div class="container header-inner">
         <a class="brand" href="#inicio" aria-label="Juan López, inicio"
           ><span class="brand-symbol" aria-hidden="true">j<span>.</span>l</span
@@ -37,6 +44,39 @@
           >
         </nav>
         <div class="header-actions">
+          <button
+            class="icon-button motion-toggle"
+            type="button"
+            aria-label="Pausar animaciones"
+            aria-pressed="false"
+            title="Pausar animaciones"
+            hidden
+          >
+            <svg
+              class="motion-pause-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+              aria-hidden="true"
+            >
+              <path d="M9 5v14M15 5v14" />
+              <path
+                d="m4 4 1 1m14 14 1 1M4 20l1-1M19 5l1-1"
+                stroke-width="1.2"
+              />
+            </svg>
+            <svg
+              class="motion-play-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+              aria-hidden="true"
+            >
+              <path d="m9 5 10 7-10 7Z" />
+            </svg>
+          </button>
           <button
             class="icon-button theme-toggle"
             type="button"
@@ -82,6 +122,11 @@
     </header>
     <main id="contenido">
       <section class="hero section-shell" aria-labelledby="hero-title">
+        <div class="hero-atmosphere" aria-hidden="true">
+          <span class="ambient-bloom ambient-bloom-green"></span>
+          <span class="ambient-bloom ambient-bloom-purple"></span>
+          <canvas class="ambient-canvas"></canvas>
+        </div>
         <div class="container hero-grid">
           <div class="hero-copy">
             <p class="eyebrow">

@@ -14,13 +14,20 @@ filtros de proyectos, navegacion movil y animaciones progresivas. Respeta
 las preferencias de color y movimiento reducido del sistema. El tema elegido
 se guarda en el navegador cuando el almacenamiento esta disponible.
 
+Los efectos ambientales incluyen luces en movimiento, una constelacion de
+conexiones, profundidad al mover el cursor y reflejos sobre los proyectos.
+El control de animaciones de la cabecera permite pausarlos y guarda la eleccion.
+La escena de particulas se detiene al salir de pantalla o al ocultar la pestana.
+
 El sitio usa HTML, CSS y JavaScript sin dependencias ni recursos externos
 necesarios para renderizarlo. Los enlaces de contacto y repositorios requieren
 conexion a internet. Las ilustraciones de proyectos son conceptuales.
 
 - `index.html`: contenido, enlaces y estructura semantica.
 - `assets/css/styles.css`: paleta, temas, componentes, animaciones y puntos de quiebre.
+- `assets/css/effects.css`: atmosfera, profundidad y microinteracciones.
 - `assets/js/main.js`: menu, tema, filtros y efectos al entrar en pantalla.
+- `assets/js/effects.js`: particulas, respuesta al cursor y control de animaciones.
 - `assets/images/favicon.svg`: icono de marca.
 
 Para personalizar el perfil, editar el texto y los enlaces en `index.html`.
@@ -33,8 +40,8 @@ El contenido sigue disponible si JavaScript esta desactivado.
 MyWebSite/
 |-- index.html                # Pagina principal y contenido
 |-- assets/                   # Recursos que usa la V2
-|   |-- css/styles.css        # Diseno y responsive
-|   |-- js/main.js            # Interacciones del navegador
+|   |-- css/                  # styles.css (base) y effects.css (efectos)
+|   |-- js/                   # main.js (interacciones) y effects.js (efectos)
 |   `-- images/favicon.svg    # Imagenes actuales
 |-- docs/project-structure.md # Guia para ubicar y editar archivos
 |-- scripts/version_assets.py # Actualizacion de versiones de recursos

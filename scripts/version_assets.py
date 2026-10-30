@@ -12,7 +12,9 @@ def main():
 
     for asset in (
         "assets/css/styles.css",
+        "assets/css/effects.css",
         "assets/js/main.js",
+        "assets/js/effects.js",
         "assets/images/favicon.svg",
     ):
         content = (root / asset).read_text(encoding="utf-8-sig")

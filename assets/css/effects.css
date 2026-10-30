@@ -1,0 +1,350 @@
+/* Atmospheric layers; content and layout live in styles.css. */
+:root {
+  --fx-green: 122, 160, 75;
+  --fx-purple: 145, 111, 195;
+}
+[data-theme="dark"] {
+  --fx-green: 182, 227, 115;
+  --fx-purple: 174, 142, 228;
+}
+.hero {
+  position: relative;
+  isolation: isolate;
+}
+.hero-atmosphere {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+.ambient-bloom {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  transform-origin: center;
+}
+.ambient-bloom-green {
+  width: min(900px, 85vw);
+  aspect-ratio: 1.2;
+  top: -20%;
+  right: -13%;
+  background: radial-gradient(
+    ellipse,
+    rgba(var(--fx-green), 0.24),
+    transparent 67%
+  );
+}
+.ambient-bloom-purple {
+  width: min(680px, 65vw);
+  aspect-ratio: 1;
+  right: 12%;
+  bottom: -30%;
+  background: radial-gradient(
+    ellipse,
+    rgba(var(--fx-purple), 0.16),
+    transparent 68%
+  );
+}
+.ambient-canvas {
+  display: none;
+  position: absolute;
+  inset: 0 0 0 auto;
+  width: 66%;
+  height: 100%;
+  opacity: 0.75;
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 25%,
+    #000 90%,
+    transparent
+  );
+}
+.fx-ready .ambient-canvas {
+  display: block;
+}
+.fx-ready .hero.is-in-view .ambient-bloom-green {
+  animation: bloom-drift 22s ease-in-out infinite alternate;
+}
+.fx-ready .hero.is-in-view .ambient-bloom-purple {
+  animation: bloom-drift 18s ease-in-out -8s infinite alternate-reverse;
+}
+.fx-ready .hero-copy > * {
+  animation: hero-enter 0.7s cubic-bezier(0.2, 0.65, 0.3, 1) both;
+}
+.fx-ready .hero-copy > h1 {
+  animation-delay: 0.06s;
+}
+.fx-ready .hero-description {
+  animation-delay: 0.12s;
+}
+.fx-ready .hero-actions {
+  animation-delay: 0.18s;
+}
+.fx-ready .hero-note {
+  animation-delay: 0.24s;
+}
+.fx-ready .code-window {
+  animation: scene-reveal 1s ease 0.12s backwards;
+}
+.project-card.reveal:nth-child(3n + 2) {
+  transition-delay: 0.07s;
+}
+.project-card.reveal:nth-child(3n) {
+  transition-delay: 0.14s;
+}
+.hero-visual .visual-grid {
+  transition: translate 0.8s cubic-bezier(0.2, 0.65, 0.3, 1);
+}
+.reading-progress {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--lime), var(--purple));
+  transform: scaleX(var(--reading-progress, 0));
+  transform-origin: left;
+  pointer-events: none;
+  z-index: 1;
+}
+.motion-play-icon {
+  display: none;
+}
+.is-motion-paused .motion-pause-icon {
+  display: none;
+}
+.is-motion-paused .motion-play-icon {
+  display: block;
+}
+.motion-toggle[aria-pressed="true"] {
+  background: var(--soft);
+  color: var(--muted);
+}
+.project-card,
+.principles-card,
+.education-card {
+  position: relative;
+}
+.project-art::after,
+.code-window::after,
+.contact-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  border-radius: inherit;
+  z-index: 4;
+}
+.project-art::after {
+  background: radial-gradient(
+    320px circle at var(--pointer-x, 50%) var(--pointer-y, 25%),
+    rgba(255, 255, 255, 0.33),
+    transparent 65%
+  );
+}
+.code-window::after {
+  background: radial-gradient(
+    350px circle at var(--pointer-x, 50%) var(--pointer-y, 25%),
+    rgba(225, 240, 205, 0.08),
+    transparent 70%
+  );
+  mask-image: linear-gradient(#000, transparent 75%);
+}
+.contact-panel::before {
+  background: radial-gradient(
+    380px circle at var(--pointer-x, 50%) var(--pointer-y, 50%),
+    rgba(255, 255, 255, 0.28),
+    transparent 70%
+  );
+}
+.button {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+.button::before {
+  content: "";
+  position: absolute;
+  inset: -60% auto -60% -80%;
+  width: 65%;
+  background: linear-gradient(
+    100deg,
+    transparent,
+    rgba(255, 255, 255, 0.19),
+    transparent
+  );
+  transform: skewX(-20deg);
+  z-index: -1;
+  pointer-events: none;
+}
+.button > span,
+.skill-symbol {
+  transition: transform 0.35s cubic-bezier(0.2, 0.65, 0.3, 1);
+}
+.section-heading h2 {
+  transition: transform 0.85s cubic-bezier(0.2, 0.65, 0.3, 1);
+}
+.section-heading.is-waiting h2 {
+  transform: translateY(16px);
+}
+.project-card:focus-within {
+  border-color: #99b179;
+}
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .has-pointer-effects .hero-visual .code-window {
+    transform: rotate(-3deg) rotateX(var(--depth-rx, 0deg))
+      rotateY(var(--depth-ry, 0deg));
+    transition:
+      transform 0.45s cubic-bezier(0.2, 0.65, 0.3, 1),
+      box-shadow 0.45s;
+  }
+  .has-pointer-effects .hero-visual.is-pointer-active .code-window {
+    transform: translateY(-5px) rotate(-1deg) rotateX(var(--depth-rx, 0deg))
+      rotateY(var(--depth-ry, 0deg));
+    box-shadow:
+      12px 24px 0 rgba(var(--fx-green), 0.18),
+      0 35px 65px rgba(20, 35, 20, 0.18);
+  }
+  .has-pointer-effects .hero-visual .visual-grid {
+    translate: var(--depth-tx, 0px) var(--depth-ty, 0px);
+  }
+  .has-pointer-effects .hero-visual .floating-note {
+    translate: calc(var(--depth-tx, 0px) * -1) calc(var(--depth-ty, 0px) * -1);
+    transition: translate 0.7s cubic-bezier(0.2, 0.65, 0.3, 1);
+  }
+  .has-pointer-effects .hero-visual.is-pointer-active .code-window::after,
+  .has-pointer-effects .project-card.is-pointer-active .project-art::after,
+  .has-pointer-effects .contact-panel.is-pointer-active::before {
+    opacity: 1;
+  }
+  .has-pointer-effects .project-card.is-pointer-active,
+  .has-pointer-effects .principles-card.is-pointer-active,
+  .has-pointer-effects .education-card.is-pointer-active {
+    border-color: rgba(var(--fx-green), 0.65);
+    box-shadow: 0 14px 40px rgba(var(--fx-purple), 0.09);
+  }
+  .has-pointer-effects .contact-panel .contact-at {
+    translate: var(--depth-tx, 0px) var(--depth-ty, 0px);
+    transition: translate 0.6s cubic-bezier(0.2, 0.65, 0.3, 1);
+  }
+  .button:hover::before,
+  .button:focus-visible::before {
+    animation: button-sheen 0.8s ease both;
+  }
+  .button:hover > span {
+    transform: translate(3px, -3px);
+  }
+  .skill:hover .skill-symbol {
+    transform: rotate(-8deg) scale(1.1);
+  }
+}
+@keyframes bloom-drift {
+  from {
+    transform: translate(-2%, 1%) scale(1);
+  }
+  to {
+    transform: translate(8%, -5%) scale(1.12);
+  }
+}
+@keyframes hero-enter {
+  from {
+    opacity: 0.2;
+    translate: 0 18px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+@keyframes scene-reveal {
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes button-sheen {
+  to {
+    left: 145%;
+  }
+}
+@media (max-width: 700px) {
+  .ambient-bloom-green {
+    width: 130vw;
+    right: -55%;
+    top: 20%;
+  }
+  .ambient-bloom-purple {
+    width: 120vw;
+    right: -25%;
+    bottom: -10%;
+  }
+  .ambient-canvas {
+    width: 100%;
+    top: 38%;
+    height: 62%;
+    opacity: 0.55;
+  }
+}
+.is-page-hidden *,
+.is-page-hidden *::before,
+.is-page-hidden *::after {
+  animation-play-state: paused !important;
+}
+html.is-motion-paused {
+  scroll-behavior: auto;
+}
+.is-motion-paused *,
+.is-motion-paused *::before,
+.is-motion-paused *::after {
+  animation: none !important;
+  transition: none !important;
+}
+.is-motion-paused .reveal.is-waiting {
+  opacity: 1;
+  transform: none;
+}
+.is-motion-paused .section-heading.is-waiting h2 {
+  transform: none;
+}
+.is-motion-paused .ambient-canvas {
+  visibility: hidden;
+}
+.is-motion-paused .hero-visual:hover .code-window {
+  transform: rotate(-3deg);
+}
+.is-motion-paused .button:hover {
+  transform: none;
+}
+.is-motion-paused .project-card:hover {
+  translate: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .ambient-canvas {
+    display: none !important;
+  }
+  .section-heading.is-waiting h2 {
+    transform: none;
+  }
+  .hero-visual:hover .code-window {
+    transform: rotate(-3deg);
+  }
+  .button:hover {
+    transform: none;
+  }
+  .project-card:hover {
+    translate: none;
+  }
+}
+@media print {
+  .hero-atmosphere,
+  .reading-progress,
+  .motion-toggle {
+    display: none !important;
+  }
+}

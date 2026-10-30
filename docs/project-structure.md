@@ -6,15 +6,17 @@ las herramientas de mantenimiento y la documentación.
 
 ## Dónde hacer cada cambio
 
-| Quiero cambiar | Archivo o carpeta |
-| --- | --- |
-| Presentación, experiencia, formación, proyectos o contacto | [`index.html`](../index.html) |
-| Colores, tipografía, temas y tamaños de pantalla | [`assets/css/styles.css`](../assets/css/styles.css) |
-| Menú móvil, filtros, tema y animaciones al desplazarse | [`assets/js/main.js`](../assets/js/main.js) |
-| Imágenes y otros recursos gráficos actuales | `assets/images/` |
-| Versiones de las URLs del CSS, JavaScript y favicon | [`scripts/version_assets.py`](../scripts/version_assets.py) |
-| Instrucciones para ejecutar y publicar | [`README.md`](../README.md) |
-| Contexto de trabajo del asistente | `AGENTS.md`, local e ignorado por Git |
+| Quiero cambiar                                                      | Archivo o carpeta                                           |
+| ------------------------------------------------------------------- | ----------------------------------------------------------- |
+| Presentación, experiencia, formación, proyectos o contacto          | [`index.html`](../index.html)                               |
+| Colores, tipografía, temas y tamaños de pantalla                    | [`assets/css/styles.css`](../assets/css/styles.css)         |
+| Menú móvil, filtros, tema y animaciones al desplazarse              | [`assets/js/main.js`](../assets/js/main.js)                 |
+| Luces ambientales, reflejos, profundidad y transiciones decorativas | [`assets/css/effects.css`](../assets/css/effects.css)       |
+| Partículas, movimiento con el cursor y pausa de animaciones         | [`assets/js/effects.js`](../assets/js/effects.js)           |
+| Imágenes y otros recursos gráficos actuales                         | `assets/images/`                                            |
+| Versiones de las URLs del CSS, JavaScript y favicon                 | [`scripts/version_assets.py`](../scripts/version_assets.py) |
+| Instrucciones para ejecutar y publicar                              | [`README.md`](../README.md)                                 |
+| Contexto de trabajo del asistente                                   | `AGENTS.md`, local e ignorado por Git                       |
 
 ## Página y recursos actuales
 
@@ -25,6 +27,26 @@ las herramientas de mantenimiento y la documentación.
 
 Las ilustraciones de los proyectos se construyen con HTML y CSS dentro de la
 página; no son archivos de imagen ni capturas reales.
+
+## Efectos e interacción
+
+Los efectos están separados de la navegación y el contenido: `effects.css` y
+`effects.js` se cargan después de los archivos principales, sin librerías externas.
+
+- El canvas decorativo utiliza 26 partículas en escritorio y 13 en móvil,
+  con una frecuencia máxima de 25 cuadros por segundo.
+- La escena se detiene cuando la presentación sale de pantalla, se oculta la
+  pestaña o se pausan las animaciones.
+- La profundidad y los reflejos siguen el cursor únicamente con un puntero fino;
+  los dispositivos táctiles mantienen una presentación sin ese movimiento.
+- El botón de pausa en la cabecera recuerda la preferencia del visitante.
+  La preferencia de movimiento reducido del sistema tiene prioridad.
+- Sin JavaScript, el contenido y la navegación siguen disponibles, con un fondo
+  ambiental estático. El botón de pausa permanece oculto.
+
+`effects.js` avisa a `main.js` mediante el evento `portfolio:motionchange` cuando
+se pausa el movimiento. Así se muestra el contenido pendiente de revelar y no
+quedan secciones invisibles.
 
 ## Herramientas y documentación
 
