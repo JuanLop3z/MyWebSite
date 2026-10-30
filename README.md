@@ -27,6 +27,18 @@ Para personalizar el perfil, editar el texto y los enlaces en `index.html`.
 Las variables al inicio de `css/styles.css` controlan la identidad visual.
 El contenido sigue disponible si JavaScript esta desactivado.
 
+Antes de crear un commit que cambie CSS, JavaScript o el favicon, actualizar
+las versiones de sus enlaces:
+
+```sh
+python scripts/version_assets.py
+```
+
+El script calcula una huella del contenido y la agrega a la URL de cada recurso.
+Asi, el navegador descarga la version nueva y evita mezclar el HTML de una
+publicacion con estilos o scripts anteriores guardados en cache. Incluir el
+`index.html` actualizado en el mismo commit. No es un paso de compilacion.
+
 ## Contenido profesional
 
 El perfil incluye experiencia profesional, indicadores del alcance del rol en
