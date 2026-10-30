@@ -190,7 +190,7 @@
     }
   }
 
-  function visiblePieces() {
+  function visiblePieces(viewport) {
     const selectors = [
       ".site-header",
       ".hero-copy > *",
@@ -228,9 +228,9 @@
           rect.width > 10 &&
           rect.height > 10 &&
           rect.bottom > 0 &&
-          rect.top < innerHeight &&
+          rect.top < viewport.height &&
           rect.right > 0 &&
-          rect.left < innerWidth &&
+          rect.left < viewport.width &&
           style.visibility !== "hidden" &&
           style.display !== "none"
         );
@@ -275,6 +275,8 @@
     stage.classList.remove("is-rebuilding");
     stage.replaceChildren();
     runtime.hidden = true;
+    root.style.removeProperty("--shake-width");
+    root.style.removeProperty("--shake-height");
     busy = false;
     resetSamples();
     window.dispatchEvent(
@@ -301,6 +303,12 @@
     focusBefore = document.activeElement;
     closePanel();
     scrollBefore = { x: scrollX, y: scrollY };
+    const viewport = {
+      width: window.visualViewport?.width || root.clientWidth,
+      height: window.visualViewport?.height || innerHeight,
+    };
+    root.style.setProperty("--shake-width", `${viewport.width}px`);
+    root.style.setProperty("--shake-height", `${viewport.height}px`);
     busyBefore = main.getAttribute("aria-busy");
     inertBefore = content.map((element) => element.inert);
     busy = true;
@@ -326,7 +334,7 @@
       passive: false,
     });
     try {
-      const pieces = visiblePieces();
+      const pieces = visiblePieces(viewport);
       if (!pieces.length) return;
       pieces.forEach((piece) => {
         const slot = document.createElement("span");
@@ -336,8 +344,8 @@
         Object.assign(slot.style, {
           top: `${top}px`,
           left: `${left}px`,
-          width: `${Math.min(innerWidth, piece.rect.right) - left}px`,
-          height: `${Math.min(innerHeight, piece.rect.bottom) - top}px`,
+          width: `${Math.min(viewport.width, piece.rect.right) - left}px`,
+          height: `${Math.min(viewport.height, piece.rect.bottom) - top}px`,
         });
         stage.append(slot);
         piece.slot = slot;
@@ -346,7 +354,7 @@
       await Promise.all(
         falling.map((piece, index) => {
           const x = (Math.random() - 0.5) * 150;
-          const y = innerHeight - piece.rect.top + piece.rect.height + 80;
+          const y = viewport.height - piece.rect.top + piece.rect.height + 80;
           const turn = (Math.random() - 0.5) * 65;
           return animate(
             piece,

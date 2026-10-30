@@ -104,7 +104,10 @@
 .shake-stage {
   position: fixed;
   z-index: 80;
-  inset: 0;
+  top: 0;
+  left: 0;
+  width: var(--shake-width, 100vw);
+  height: var(--shake-height, 100vh);
   overflow: hidden;
   pointer-events: none;
 }
@@ -137,9 +140,10 @@
 .shake-recovery {
   position: fixed;
   z-index: 90;
-  bottom: calc(14px + env(safe-area-inset-bottom, 0px));
+  top: var(--shake-height, 100vh);
   left: 12px;
-  right: 12px;
+  width: calc(var(--shake-width, 100vw) - 24px);
+  transform: translateY(calc(-100% - 14px - env(safe-area-inset-bottom, 0px)));
   display: flex;
   align-items: center;
   gap: 10px;
@@ -211,6 +215,10 @@
 html.is-shake-playing {
   overflow: hidden;
   scroll-behavior: auto;
+}
+html.is-shake-playing body {
+  overflow: hidden;
+  overflow: clip;
 }
 .is-shake-playing .site-header,
 .is-shake-playing main,
