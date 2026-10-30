@@ -22,8 +22,10 @@
     />
     <link rel="stylesheet" href="assets/css/styles.css?v=dbc7bbec390d" />
     <link rel="stylesheet" href="assets/css/effects.css?v=0b919a16c4f0" />
+    <link rel="stylesheet" href="assets/css/shake.css?v=780c6d0bf908" />
     <script src="assets/js/main.js?v=9a02cd173ea3" defer></script>
-    <script src="assets/js/effects.js?v=9840ad97bfdf" defer></script>
+    <script src="assets/js/effects.js?v=b690faec8e55" defer></script>
+    <script src="assets/js/shake.js?v=99c3b8f25667" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -1067,5 +1069,74 @@
         >
       </div>
     </footer>
+    <aside class="shake-lab" aria-label="Experimento móvil" hidden>
+      <button
+        class="shake-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="shake-panel"
+      >
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+          aria-hidden="true"
+        >
+          <rect x="7" y="3" width="10" height="18" rx="2" />
+          <path d="M11 17h2M3 7 1 10l2 3m18-6 2 3-2 3" />
+        </svg>
+        Agita y reconstruye <span aria-hidden="true">↗</span>
+      </button>
+      <div class="shake-panel" id="shake-panel" hidden>
+        <p class="eyebrow">LAB / SOLO MÓVIL</p>
+        <h2>Un pequeño terremoto.</h2>
+        <p>
+          Agita el teléfono y mira cómo la página cae y vuelve a su lugar, pieza
+          por pieza.
+        </p>
+        <div class="shake-actions">
+          <button
+            class="shake-button shake-button-primary"
+            type="button"
+            data-shake-enable
+            aria-pressed="false"
+          >
+            Activar al agitar
+          </button>
+          <button class="shake-button" type="button" data-shake-demo>
+            Probar efecto
+          </button>
+        </div>
+        <p class="shake-status" id="shake-status">
+          El sensor se activa solo si tú lo eliges.
+        </p>
+      </div>
+    </aside>
+    <div class="shake-runtime" hidden>
+      <div class="shake-stage" aria-hidden="true"></div>
+      <div
+        class="shake-recovery"
+        role="group"
+        aria-label="Reconstrucción de la página"
+      >
+        <span class="shake-recovery-mark" aria-hidden="true">✳</span>
+        <div class="shake-recovery-copy">
+          <strong data-shake-phase>Desarmando la página…</strong
+          ><span data-shake-count aria-hidden="true"></span>
+          <div class="shake-progress" aria-hidden="true">
+            <span data-shake-progress></span>
+          </div>
+        </div>
+        <button class="shake-restore" type="button">Restaurar ahora</button>
+      </div>
+    </div>
+    <p
+      class="shake-announcement"
+      role="status"
+      aria-live="polite"
+      aria-atomic="true"
+      hidden
+    ></p>
   </body>
 </html>

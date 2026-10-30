@@ -18,6 +18,7 @@
   let width = 0;
   let height = 0;
   let pointer = null;
+  let sceneSuspended = false;
 
   try {
     userPaused = localStorage.getItem("juan-portfolio-motion") === "paused";
@@ -26,7 +27,8 @@
   }
 
   const paused = () => reducedMotion.matches || userPaused;
-  const pointerEnabled = () => finePointer.matches && !paused();
+  const pointerEnabled = () =>
+    finePointer.matches && !paused() && !sceneSuspended;
   const clamp = (value, low, high) => Math.max(low, Math.min(high, value));
 
   // One animation frame per pointer update, with bounded movement and no scroll listener per card.
@@ -155,7 +157,14 @@
 
   function draw(time) {
     animationFrame = 0;
-    if (paused() || document.hidden || !heroVisible || !context) return;
+    if (
+      paused() ||
+      sceneSuspended ||
+      document.hidden ||
+      !heroVisible ||
+      !context
+    )
+      return;
     animationFrame = requestAnimationFrame(draw);
     if (lastPaint && time - lastPaint < 40) return;
     if (lastPaint) elapsed += Math.min((time - lastPaint) / 1000, 0.1);
@@ -214,7 +223,13 @@
     cancelAnimationFrame(animationFrame);
     animationFrame = 0;
     lastPaint = 0;
-    if (!paused() && !document.hidden && heroVisible && context) {
+    if (
+      !paused() &&
+      !sceneSuspended &&
+      !document.hidden &&
+      heroVisible &&
+      context
+    ) {
       resizeCanvas();
       animationFrame = requestAnimationFrame(draw);
     }
@@ -295,6 +310,12 @@
   });
   window.addEventListener("pageshow", () => {
     scheduleProgress();
+    reconcileCanvas();
+  });
+  window.addEventListener("portfolio:shakechange", (event) => {
+    sceneSuspended = event.detail.active;
+    pointer = null;
+    resets.forEach((reset) => reset());
     reconcileCanvas();
   });
 

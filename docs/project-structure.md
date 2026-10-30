@@ -48,6 +48,35 @@ Los efectos están separados de la navegación y el contenido: `effects.css` y
 se pausa el movimiento. Así se muestra el contenido pendiente de revelar y no
 quedan secciones invisibles.
 
+## Prototipo móvil: agitar y reconstruir
+
+[`shake.js`](../assets/js/shake.js) se carga después de las interacciones
+principales y [`shake.css`](../assets/css/shake.css) controla la presentación.
+El laboratorio aparece en pantallas de hasta 1024 px con puntero táctil.
+En escritorio y sin JavaScript permanece oculto.
+
+- El sensor empieza apagado. Se habilita desde un botón; si existe
+  `DeviceMotionEvent.requestPermission()`, se llama dentro de ese gesto.
+- El sensor requiere un contexto seguro y un navegador compatible. La web de
+  GitHub Pages usa HTTPS. Si el permiso se deniega o no hay sensor, **Probar
+  efecto** permite probar la animación igualmente.
+- La detección compara muestras separadas al menos 60 ms: requiere tres cambios
+  de aceleración de 14 m/s² dentro de 900 ms, separados al menos 110 ms.
+  Hay ocho segundos de espera entre activaciones por movimiento.
+- Se animan hasta 22 bloques visibles con Web Animations; permanecen en sus
+  lugares originales del DOM. No se mueven enlaces ni se reemplaza el contenido.
+- El contenido queda temporalmente inerte. El botón **Restaurar ahora** y Escape
+  cancelan las animaciones y recuperan foco, desplazamiento e interacción.
+- También se restaura al cambiar tamaño, ocultar la pestaña, pausar movimiento
+  o salir de la página. Un temporizador de 7,5 segundos asegura la recuperación.
+- `portfolio:shakechange` suspende la escena de partículas durante el efecto.
+  La preferencia de movimiento reducido y la pausa general deshabilitan el juego.
+- Las lecturas del sensor se procesan en memoria; no se guardan ni se envían.
+
+La sensibilidad es un valor inicial del prototipo. Debe comprobarse con un
+teléfono real; la simulación de eventos permite validar el flujo y los permisos,
+pero no sustituye la prueba del sensor físico.
+
 ## Herramientas y documentación
 
 - `scripts/` contiene herramientas para mantener el proyecto. Su código no se

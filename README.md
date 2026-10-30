@@ -19,6 +19,12 @@ conexiones, profundidad al mover el cursor y reflejos sobre los proyectos.
 El control de animaciones de la cabecera permite pausarlos y guarda la eleccion.
 La escena de particulas se detiene al salir de pantalla o al ocultar la pestana.
 
+En moviles tactiles aparece **Agita y reconstruye**: abre el laboratorio y pulsa
+**Activar al agitar** para habilitar el sensor, o **Probar efecto** para ver la
+demostracion. Los bloques visibles caen y se reconstruyen uno a uno. **Restaurar
+ahora** permite terminar al instante. El experimento respeta la pausa general y
+el movimiento reducido; el sensor comienza apagado en cada visita.
+
 El sitio usa HTML, CSS y JavaScript sin dependencias ni recursos externos
 necesarios para renderizarlo. Los enlaces de contacto y repositorios requieren
 conexion a internet. Las ilustraciones de proyectos son conceptuales.
@@ -26,8 +32,10 @@ conexion a internet. Las ilustraciones de proyectos son conceptuales.
 - `index.html`: contenido, enlaces y estructura semantica.
 - `assets/css/styles.css`: paleta, temas, componentes, animaciones y puntos de quiebre.
 - `assets/css/effects.css`: atmosfera, profundidad y microinteracciones.
+- `assets/css/shake.css`: laboratorio y reconstruccion para moviles.
 - `assets/js/main.js`: menu, tema, filtros y efectos al entrar en pantalla.
 - `assets/js/effects.js`: particulas, respuesta al cursor y control de animaciones.
+- `assets/js/shake.js`: activacion del sensor, deteccion y animacion reversible.
 - `assets/images/favicon.svg`: icono de marca.
 
 Para personalizar el perfil, editar el texto y los enlaces en `index.html`.
@@ -40,8 +48,8 @@ El contenido sigue disponible si JavaScript esta desactivado.
 MyWebSite/
 |-- index.html                # Pagina principal y contenido
 |-- assets/                   # Recursos que usa la V2
-|   |-- css/                  # styles.css (base) y effects.css (efectos)
-|   |-- js/                   # main.js (interacciones) y effects.js (efectos)
+|   |-- css/                  # styles.css, effects.css y shake.css
+|   |-- js/                   # main.js, effects.js y shake.js
 |   `-- images/favicon.svg    # Imagenes actuales
 |-- docs/project-structure.md # Guia para ubicar y editar archivos
 |-- scripts/version_assets.py # Actualizacion de versiones de recursos
