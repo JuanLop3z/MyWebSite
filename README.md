@@ -2,20 +2,26 @@
 
 Portafolio personal de Juan Lopez, construido con HTML, CSS y JavaScript.
 
+## Versiones
+
+- `master`: V1 original, conservada como recuerdo.
+- `v2`: rama para desarrollar y publicar la segunda version. Parte de la V1.
+
 ## Sitio publicado
 
 https://juanlop3z.github.io/MyWebSite/
 
 ## Despliegue en GitHub Pages
 
-El sitio se publica desde la raiz de la rama `master`. En el repositorio,
+Para publicar la V2 desde la raiz de la rama `v2`, en el repositorio,
 la configuracion de **Settings > Pages > Build and deployment** debe ser:
 
 - **Source:** Deploy from a branch.
-- **Branch:** `master`.
+- **Branch:** `v2`.
 - **Folder:** `/ (root)`.
 
-Los cambios que se suben a `master` se publican automaticamente. No se
+Una vez seleccionada esa rama en Pages, los cambios que se suben a `v2`
+se publican automaticamente. No se
 necesitan dependencias ni un paso de compilacion. El archivo `.nojekyll`
 permite servir los archivos estaticos sin procesarlos con Jekyll.
 
